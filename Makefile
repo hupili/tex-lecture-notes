@@ -1,6 +1,6 @@
 
 # assign a name here
-GOAL=hpl-ln-temp
+GOAL=notes
 # default directory settings
 DIR_OUTPUT=output
 DIR_PIC=eps
