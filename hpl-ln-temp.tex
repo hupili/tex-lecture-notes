@@ -1,0 +1,92 @@
+%HU, Pili
+%Create: 20110910
+%Modify: 20110910
+%use this template to facilitate speedup noting
+
+
+%these initial settings are copied from 
+%http://www-solar.mcs.st-and.ac.uk/~clare/Latex/latex_template.tex
+\documentclass[11pt]{article}
+\topmargin-0.1cm 
+\headsep0.1cm 
+\headheight0.1cm 
+\footskip1.0cm
+\oddsidemargin0cm 
+\evensidemargin0cm 
+\textwidth15cm
+\textheight23cm
+
+\usepackage{graphicx}
+\usepackage[square]{natbib}
+\usepackage{amsmath}
+\usepackage{framed}
+
+\newenvironment{hint}
+{\begin{center}\begin{minipage}{0.55\linewidth}\begin{framed}\it}
+{\end{framed}\end{minipage}\end{center}}
+
+\input{commands.tex}
+
+\renewcommand{\maketitle}{
+	aaa
+%		\@title
+%		\@author
+}
+
+%===============begin document=======
+
+\begin{document}
+\title{\sc A Template Package for Lecture Notes}
+\author{Pili HU}
+
+%\maketitle
+
+\begin{abstract}
+This document\citep{SampleBib} aims at providing a quick template for lecture notes. Along with this tex file, you'll find a ".bib", "Makefile", "commands.tex" in the same directory.  
+
+\end{abstract}
+
+\section{Introduction}
+
+%\begin{hint}
+%\begin{center}
+%\begin{minipage}{8cm}
+%\end{minipage}
+%\end{center}
+%\end{hint}
+
+\begin{hint}
+This small portion of article shows the hint label. You can create as many hints as you like using this template. 
+\end{hint}
+
+\subsection{Layout}
+Along with this tex file, you'll find these files:
+\begin{itemize}
+	\item \verb!hpl-ln-temp.bib! : the bibliagraphy database
+	\item \verb!Makefile! : if you have linux programing experience, you must be familiar with this file. \textnormal{\^\_\^}
+	\item \verb!commands.tex! : this file provides a new set of commands that will be helpful to take note
+\end{itemize}
+
+\subsection{Compile}
+Much simpler than any tutorial! Just type:
+\begin{verbatim}
+make
+\end{verbatim}
+Feel it disgusting to delete temporary files manually? Try this:
+\begin{verbatim}
+make clean
+\end{verbatim}
+Your world is clean.
+
+\section{Conclusion}
+
+This is conclusion.
+
+%\citet{SampleBib} \\
+%\cite{SampleBib}  \\
+
+\bibliographystyle{plainnat}    
+%NOTICE: Specify your bibliagraphy file here
+\bibliography{hpl-ln-temp}       
+
+\end{document}
